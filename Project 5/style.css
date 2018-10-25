@@ -1,0 +1,508 @@
+/*--Universal Styles--*/
+
+html {
+  font-family: 'courier', sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+h1, h2, h3 {
+  font-family: 'courier', serif;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 2rem auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  color: darkgrey;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+h5 {
+  font-weight: 300;
+  font-size: .75rem;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+/*--Header--*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  height: 64px;
+  background-color: #999165;
+  opacity: .95;
+  border-bottom: solid 1px #d8d8d8;
+  position: fixed;
+  z-index: 30;
+  width: 100%;
+}
+
+#company-name {
+  color: #000000;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-weight: 300;
+  color: white;
+}
+
+#company-name span {
+  color: black;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo span {
+  font-weight: 700;
+}
+
+#logo img {
+  margin-left: 24px;
+}
+
+
+/*--Navigation--*/
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+
+nav ul {
+  display: flex;
+  align-content: center;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 16px;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  opacity: .8;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (max-width:770px) {
+  nav h5 {
+    display: none;
+  }
+  nav li:nth-child(3n) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  nav img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #company-name {
+    display: none;
+  }
+  nav li {
+    margin: 0 1.2rem;
+  }
+  nav {
+    width: 60%
+  }
+}
+
+main {
+  position: relative;
+  top: 64px;
+  text-align: center;
+}
+.jumbotron {
+  padding: 2rem 2rem;
+  background-color: #C3D8E3;
+  display: flex;
+  align-items:flex-start;
+}
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.jumbotron h1{
+  color: black;
+  text-align: center;
+}
+
+.jumbotron p{
+font-size: 1.5rem;
+}
+
+.hgroup {
+  margin: 0 40px;
+  display: flex;
+  align-items:stretch;
+  flex-flow: column;
+}
+
+.button {
+  width: 100%;
+  max-height: 40px;
+  align-self: flex-start;
+  border-radius: 5px;
+  background-color: transparent;
+  border: solid 1px white;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 2rem 2rem 2rem 0rem;
+  text-align: center;
+  text-transform: uppercase;:
+}
+
+.button:hover {
+  background-color: #ECFAFF;
+  color: white;
+  transition: .25s ease 150ms;
+}
+
+@media only screen and (max-width:830px) {
+  .jumbotron {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 2rem;
+  }
+  .jumbotron .banner {
+    width: 100%;
+    max-height: 20rem;
+    overflow: hidden;
+  }
+  .hgroup {
+    flex-flow: row wrap;
+    margin: 0;
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+    margin: 2rem 0rem 2rem 0rem;
+  }
+}
+
+#highlights {
+  display: flex;
+  flex-flow: row;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  color: #000000;
+}
+.focus {
+  max-width: 60%;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0 1.5rem 0 0;
+}
+
+#highlights img, #thesis img {
+  width: 100%;
+}
+
+aside {
+  max-width: 40%;
+}
+
+aside .image {
+  width: 35%;
+}
+
+.title {
+  padding-left: 1rem;
+  max-width: 60%;
+}
+
+.title p {
+  margin: 0.75rem auto;
+}
+
+.mobile {
+  display: none;
+}
+
+.story {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: #ffffff;
+  border: solid 1px #d8d8d8;
+  padding: 1rem;
+  margin: .25rem;
+}
+
+aside .story:hover {
+  opacity: .90;
+}
+
+.info a {
+  color: #blue;
+  padding-top: 3rem;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.reference {
+  font-size: 0.75rem;
+  margin-top: 2.5rem;
+}
+
+/*--Overview Breakpoints--*/
+
+@media only screen and (max-width:1080px) {
+  #highlights {
+    flex-flow: column;
+    padding: 2rem 0;
+  }
+
+  .focus {
+    max-width: 100%;
+  }
+
+  .story {
+    border: solid 1px #d8d8d8;
+  }
+
+  #highlights aside {
+    width: inherit;
+    max-width: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem 1.5rem 0;
+  }
+  #highlights .image {
+    padding: 0;
+    width: 100%;
+  }
+  #highlights .story {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    align-items: flex-start;
+  }
+  #highlights .title {
+    max-width: none;
+    margin-top: 1rem;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: initial;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  #highlights .focus {
+    display: none;
+  }
+  #highlights aside {
+    flex-flow: column;
+    width: auto;
+    margin-top: 0;
+  }
+  #highlights .story {
+    max-width: 100%;
+    margin: 0.55brem 0;
+  }
+}
+
+/*--Programs--*/
+
+#courses {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: auto;
+  background-color: #FFF4E1;
+}
+
+#courses h2, #thesis h2{
+  padding: 2rem 0 0 0;
+  width: 100%;
+  text-align: center;
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 2rem;
+  background-color: #CCC59F;
+}
+
+.program a {
+  color: black;
+}
+
+.program img {
+  width: 100%;
+}
+
+#courses h3 {
+  margin: 1rem 0;
+}
+
+.details {
+  padding: 1rem;
+  flex: 1 1;
+}
+
+.details h4 {
+  padding: 0.5rem 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.details p {
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  padding: .5rem 0 1.5rem 0;
+}
+
+/*--Programs Breakpoints--*/
+
+@media only screen and (max-width: 800px) {
+  .program {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  #courses h2 {
+    margin: 0 auto 2rem;
+  }
+  #courses {
+    padding-bottom: 1rem;
+  }
+  .program {
+    width: 80%;
+    margin: 0.5rem 0;
+  }
+  .program img, .program h4, .program p {
+    display: none;
+  }
+  #courses h3 {
+    margin: 0;
+  }
+}
+
+/*--Thesis--*/
+
+.thesis {
+  background-color: #ECF3FF;
+  padding: 0 0 2rem 0;
+}
+
+.thesis>div {
+  display: flex;
+  padding: 1rem 1.5rem;
+}
+
+.thesis .focus {
+  padding: 0;
+}
+
+.thesis aside {
+  display: flex;
+  flex-flow: column;
+  margin-left: 1rem;
+}
+
+.thesis h3 {
+  margin: 1.5rem 0;
+}
+
+.focus video {
+  width: 100%;
+}
+
+
+/*--Thesis Breakpoints--*/
+
+@media only screen and (max-width:1080px) {
+  .thesis>div {
+    flex-flow: column;
+  }
+  .thesis .story {
+    flex-flow: row;
+    padding: 0;
+    max-height: 10.5rem;
+  }
+  .thesis aside {
+    display: flex;
+    flex-flow: row;
+    max-width: none;
+    margin: 2rem 0 0 0;
+  }
+  .thesis .image {
+    padding: 1rem;
+    max-width: 25%;
+  }
+}
+
+
+/*--Footer--*/
+
+footer {
+  background-color: #CCC497;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #99915F;
+  font-weight: 300;
+  font-family: courier;
+}
+
+.legal a {
+  margin: 0 2rem;
+}
+
+.legal a:hover {
+  text-decoration: underline;
+}
