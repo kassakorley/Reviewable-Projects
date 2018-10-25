@@ -1,0 +1,37 @@
+<div class="contents-container">
+  <div class="create-container">
+    <div class="create-column">
+      <h2 class="form-title">Edit a video</h2>
+      <form class="input-form" action="/videos/{{video._id}}/updates" method="post" >
+
+        <label class="form-label" for="url" >
+          {{#if video.errors.url}}
+            <span class="error">{{video.errors.url.message}}</span>
+          {{else}}
+            URL
+          {{/if}}
+        </label>
+        <input id="url-input" name="url" value="{{video.url}}"/>
+
+        <label class="form-label" for="title">
+        {{#if video.errors.title}}
+          <span class="error">{{video.errors.title.message}}</span>
+        {{else}}
+          Title
+        {{/if}}
+        </label>
+        <input id="title-input" name="title" maxlength="50" value="{{video.title}}"/>
+
+        <label class="form-label" for="description">Description</label>
+        <textarea id="description-input" name="description">{{video.description}}</textarea>
+
+        <div class="form-navigation">
+          <button class="input-button" id="submit-button" type="submit">
+            Submit
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
