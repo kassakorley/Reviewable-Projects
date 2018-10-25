@@ -1,0 +1,28 @@
+articles:
+  '1':
+    commentIds:
+      - 1
+    comments: []
+    downvotedBy: []
+    id: 1
+    title: my first article
+    upvotedBy: []
+    url: 'http://www.bbc.com/'
+    username: a@gmail.com
+comments:
+  '1':
+    articleId: 1
+    body: just a general site
+    downvotedBy: []
+    id: 1
+    upvotedBy: []
+    username: a@gmail.com
+nextArticleId: 2
+nextCommentId: 2
+users:
+  a@gmail.com:
+    articleIds:
+      - 1
+    commentIds:
+      - 1
+    username: a@gmail.com
